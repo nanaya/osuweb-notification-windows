@@ -20,10 +20,14 @@ function generate (result) {
   };
 }
 
-const server = Net.createServer(function (socket) {
-  socket.on('data', function (result) {
-    Notifier.notify(generate(result.toString()));
+function main () {
+  const server = Net.createServer(function (socket) {
+    socket.on('data', function (result) {
+      Notifier.notify(generate(result.toString()));
+    });
   });
-});
 
-server.listen(4900, '10.0.2.2');
+  server.listen(4900, '192.168.255.2');
+}
+
+main();
