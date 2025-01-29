@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "node-notifier": "^10.0.1",
-    "semistandard": "^16.0.1"
+    "semistandard": "*"
   },
   "type": "module"
 }
